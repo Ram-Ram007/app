@@ -16,3 +16,4 @@ function Input({ label, name, type, placeholder }) {
 }
 
 export default Input;
+//

@@ -46,13 +46,9 @@ const validationSchema = Yup.object().shape({
     description.textContent = values.description;
 
     
-
-   
-
     card.append(title, description, ratings, url);
 
 
-    
     document.querySelector(".card").appendChild(card);
 
 

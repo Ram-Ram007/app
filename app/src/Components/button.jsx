@@ -10,4 +10,5 @@ function Button({ name, type, onClick }) {
   );
 }
 
+//
 export default Button;
