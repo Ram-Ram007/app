@@ -36,7 +36,7 @@ function App() {
       return item;
       
     });
-    console.log(updatedTitle)
+    
     
     
     setTitles(updatedTitles);
