@@ -1,3 +1,4 @@
+//final code
 import React, { useEffect, useState } from "react";
 import Input from "./Components/input";
 import Button from "./Components/button";
@@ -27,19 +28,20 @@ function App() {
   };
 
   function UpdateCard(id, updatedTitle) {
-      const updatedTitles = titles.map((item) => {
-        if (item.id === id) {
-          return { ...item, title: updatedTitle };
-            
-        }
-        return item;
+    const updatedTitles = titles.map((item) => {
+      if (item.id === id) {
+        return { ...item, title: updatedTitle };
+        
+      }
+      return item;
       
-      });
-      console.log(updatedTitle)
-
-      
-      setTitles(updatedTitles);
-      localStorage.setItem("titles", JSON.stringify(updatedTitles));
+    });
+    console.log(updatedTitle)
+    
+    
+    setTitles(updatedTitles);
+    localStorage.setItem("titles", JSON.stringify(updatedTitles));
+    return updatedTitle;
     
   }
   
@@ -77,7 +79,7 @@ function App() {
             <Card
               values={item}
               deleteCard={() => deleteCard(item.id)}
-              UpdateCard={() => UpdateCard(item.id)}
+              UpdateCard={(updatedTitle) => UpdateCard(item.id,updatedTitle)}
             />
           </div>
         );

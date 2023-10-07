@@ -1,5 +1,4 @@
-
-
+// final code
 import React, { useState } from "react";
 
 const Card = ({ values, deleteCard, UpdateCard }) => {
@@ -11,9 +10,9 @@ const Card = ({ values, deleteCard, UpdateCard }) => {
   };
 
   const handleSaveClick = () => {
-    UpdateCard(values.id, updatedTitle);
+    UpdateCard(updatedTitle);
     setIsEditing(false);
-  };
+};
 
   return (
     <div className="card">

@@ -1,3 +1,4 @@
+//finall code
 import React from 'react';
 
 function Button({ name, type}) {
