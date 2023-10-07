@@ -1,14 +1,13 @@
 import React from 'react';
 
-function Button({ name, type, onClick }) {
+function Button({ name, type}) {
   return (
     <div>
-      <button type={type} onClick={onClick}>
+      <button type={type} >
         {name}
       </button>
     </div>
   );
 }
 
-//
 export default Button;

@@ -1,19 +1,19 @@
-import React from 'react';
+  import React from "react";
 
-function Input({ label, name, type, placeholder }) {
-  return (
-    <div>
-      <label>
-        {label}
+  function Input({ label, id, type, name, placeholder, onChange, value }) {
+    return (
+      <>
+        <label>{label}</label>
         <input
-          name={name}
           type={type}
+          id={id}
           placeholder={placeholder}
+          name={name}
+          onChange={onChange}
+          value={value}
         />
-      </label>
-    </div>
-  );
-}
+      </>
+    );
+  }
 
-export default Input;
-//
+  export default Input;
