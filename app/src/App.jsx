@@ -26,9 +26,23 @@ function App() {
     setTitle("");
   };
 
-  function UpdateCard() {
-    // Add update functionality here
+  function UpdateCard(id, updatedTitle) {
+      const updatedTitles = titles.map((item) => {
+        if (item.id === id) {
+          return { ...item, title: updatedTitle };
+            
+        }
+        return item;
+      
+      });
+      console.log(updatedTitle)
+
+      
+      setTitles(updatedTitles);
+      localStorage.setItem("titles", JSON.stringify(updatedTitles));
+    
   }
+  
 
   function deleteCard(id) {
     const filterArray = titles.filter((check) => check.id !== id);
