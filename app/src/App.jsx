@@ -1,15 +1,13 @@
-import Read from "./Components/read";
-import Create from "./Components/create";
-import Update from "./Components/update";
+import Form from "./Components/Form";
 import "./App.css";
 
 function App() {
   return (
     <div>
-      crud operation
-      <Create />
-      <Update />
-      <Read />
+      <h1>want to learn react</h1>
+    <Form />
+  
+      
     </div>
   );
 }
