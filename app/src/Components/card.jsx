@@ -3,10 +3,10 @@ import React, { useState } from "react";
 
 const Card = ({ values, deleteCard, UpdateCard }) => {
   const [isEditing, setIsEditing] = useState(false);
-  const [updatedTitle, setUpdatedTitle] = useState(values.title);
+  const [updatedTitle, setUpdatedTitle] = useState(values.title);// current title value stores
 
   const handleUpdateClick = () => {
-    setIsEditing(true);
+    setIsEditing(true); //it goes to return
   };
 
   const handleSaveClick = () => {

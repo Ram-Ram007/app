@@ -20,9 +20,9 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = { id: uuidv4(), title: title };
-    const newTitles = [...titles, data];
-    setTitles(newTitles);
+    const data = { id: uuidv4(), title: title };//created object
+    const newTitles = [...titles, data]; //storing data to newtitle
+    setTitles(newTitles);// stored in top
     localStorage.setItem("titles", JSON.stringify(newTitles));
     setTitle("");
   };
@@ -30,6 +30,7 @@ function App() {
   function UpdateCard(id, updatedTitle) {
     const updatedTitles = titles.map((item) => {
       if (item.id === id) {
+        //check the last title and the updated value id.
         return { ...item, title: updatedTitle };
         
       }
@@ -45,23 +46,19 @@ function App() {
     
   }
   
-
+  // store the value that does not match.
   function deleteCard(id) {
-    const filterArray = titles.filter((check) => check.id !== id);
+    const filterArray = titles.filter((iteam) => iteam.id !== id);
     setTitles(filterArray);
     localStorage.setItem("titles", JSON.stringify(filterArray));
   }
-
-  useEffect(() => {
-    console.log(titles);
-  }, [titles]);
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <div>
           <Input
-            label="Title"
+            label="Title"// props passing
             type="text"
             id="1"
             name="title"
@@ -77,8 +74,9 @@ function App() {
         return (
           <div key={item.id}>
             <Card
-              values={item}
+              values={item}//values contain id and title
               deleteCard={() => deleteCard(item.id)}
+              //getting value from card..
               UpdateCard={(updatedTitle) => UpdateCard(item.id,updatedTitle)}
             />
           </div>
